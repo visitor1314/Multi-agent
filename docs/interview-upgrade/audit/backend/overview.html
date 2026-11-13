@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EchoMind-Python 项目摸底报告</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; color: #18202a; background: #f6f7f9; }
+    main { max-width: 1080px; margin: 0 auto; padding: 32px 20px 56px; }
+    section { margin-top: 24px; }
+    h1, h2 { color: #111827; line-height: 1.2; }
+    h1 { font-size: 34px; margin: 4px 0 8px; }
+    h2 { font-size: 20px; margin: 0 0 12px; }
+    p, li { line-height: 1.65; }
+    .hero { background: #ffffff; border: 1px solid #d8dee8; border-radius: 8px; padding: 22px; }
+    .eyebrow { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0; color: #2563eb; text-transform: uppercase; }
+    .muted, .empty { color: #5b6778; }
+    .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .metrics div { background: #ffffff; border: 1px solid #d8dee8; border-radius: 8px; padding: 16px; }
+    .metrics strong { display: block; font-size: 24px; color: #111827; }
+    .metrics span { color: #5b6778; font-size: 13px; }
+    .grid { display: grid; gap: 16px; }
+    .two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid > div, section:not(.hero):not(.metrics):not(.grid) { background: #ffffff; border: 1px solid #d8dee8; border-radius: 8px; padding: 18px; }
+    table { width: 100%; border-collapse: collapse; background: #ffffff; }
+    th, td { text-align: left; vertical-align: top; border-bottom: 1px solid #e5e9f0; padding: 9px 10px; font-size: 14px; white-space: pre-wrap; word-break: break-word; }
+    th { color: #334155; background: #eef2f7; }
+    pre { white-space: pre-wrap; word-break: break-word; background: #f8fafc; border: 1px solid #d8dee8; border-radius: 8px; padding: 12px; overflow-x: auto; }
+    code { color: #0f172a; }
+    li { margin: 4px 0; }
+    ul { padding-left: 20px; }
+    @media (max-width: 760px) { .metrics, .two, .three { grid-template-columns: 1fr; } main { padding: 18px 12px 36px; } }
+  </style>
+</head>
+<body>
+  <main>
+    
+    <section class="hero">
+      <p class="eyebrow">鼠鼠实习妙妙工具项目摸底报告</p>
+      <h1>EchoMind-Python</h1>
+      <p class="muted">E:\project\agent\EchoMind所有代码+详细文档+简历\EchoMind</p>
+    </section>
+
+    <section class="metrics">
+      <div><strong>143</strong><span>Files scanned</span></div>
+      <div><strong>6425990</strong><span>Approx bytes</span></div>
+      <div><strong>4</strong><span>Dependency clues</span></div>
+      <div><strong>19</strong><span>Test clues</span></div>
+    </section>
+
+    <section>
+      <h2>语言和文件类型</h2>
+      <div class="grid two">
+        <div><table><thead><tr><th>Language</th><th>Files</th></tr></thead><tbody><tr><td>Other</td><td>90</td></tr><tr><td>Python</td><td>44</td></tr><tr><td>YAML</td><td>6</td></tr><tr><td>Shell</td><td>3</td></tr></tbody></table></div>
+        <div><table><thead><tr><th>Extension</th><th>Files</th></tr></thead><tbody><tr><td>.py</td><td>44</td></tr><tr><td>.md</td><td>39</td></tr><tr><td>.json</td><td>14</td></tr><tr><td>.bin</td><td>8</td></tr><tr><td>.svg</td><td>7</td></tr><tr><td>.png</td><td>7</td></tr><tr><td>.yml</td><td>6</td></tr><tr><td>[no extension]</td><td>4</td></tr><tr><td>.sh</td><td>3</td></tr><tr><td>.conf</td><td>3</td></tr><tr><td>.txt</td><td>2</td></tr><tr><td>.xml</td><td>2</td></tr><tr><td>.mmd</td><td>2</td></tr><tr><td>.example</td><td>1</td></tr><tr><td>.sqlite3</td><td>1</td></tr></tbody></table></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>核心链路线索</h2>
+      <table><thead><tr><th>Category</th><th>Hit Count</th><th>Representative Paths</th></tr></thead><tbody><tr><td>api_backend</td><td>7</td><td>api/main.py
+config/mcp_servers.json
+skills/general_customer_service/SKILL.md
+tests/mcp_fixture_server.py
+tooling/mcp_server.py
+wiki/assets/flows/memory-maintenance-current.mmd
+wiki/assets/flows/memory-maintenance-current.png</td></tr><tr><td>async_jobs</td><td>2</td><td>evaluation/jobs.py
+tests/test_eval_jobs.py</td></tr><tr><td>config</td><td>5</td><td>config/mcp_servers.json
+config/nginx/frontend.conf
+config/nginx/nginx.conf
+config/nginx/web-gateway.conf
+config/prometheus.yml</td></tr><tr><td>data_pipeline</td><td>1</td><td>core/skill_loader.py</td></tr><tr><td>database_state</td><td>1</td><td>data/chroma/chroma.sqlite3</td></tr><tr><td>devops_deploy</td><td>9</td><td>.dockerignore
+Dockerfile
+config/nginx/frontend.conf
+config/nginx/nginx.conf
+config/nginx/web-gateway.conf
+docker-compose.web.yml
+docker-compose.yml
+docker-deploy.sh
+wiki/assets/architecture/06-deployment.svg</td></tr><tr><td>evaluation</td><td>38</td><td>data/eval/availability-2026-10-24.json
+data/eval/availability-2026-10-24.junit.xml
+data/eval/baseline.json
+data/eval/deepseek-intent-diagnostic-2026-10-25.json
+data/eval/embedding-2026-10-24.junit.xml
+data/eval/embedding-chain-fixed-2026-10-25.json
+data/eval/embedding-chain-live-2026-10-25.json
+data/eval/embedding-live-2026-10-24.json
+data/eval/history/036d5ce02abd460fa38fb638e0073085.json
+data/eval/speed-cost-after-2026-10-25.json</td></tr><tr><td>inference_demo</td><td>6</td><td>api/main.py
+config/mcp_servers.json
+data/demo_docs/sample_knowledge.json
+data/demo_docs/troubleshooting.md
+tests/mcp_fixture_server.py
+tooling/mcp_server.py</td></tr><tr><td>model</td><td>6</td><td>wiki/assets/architecture/01-overall-architecture.svg
+wiki/assets/architecture/02-chat-flow.svg
+wiki/assets/architecture/03-agent-skills.svg
+wiki/assets/architecture/04-data-storage.svg
+wiki/assets/architecture/05-monitor-eval.svg
+wiki/assets/architecture/06-deployment.svg</td></tr><tr><td>security_auth</td><td>3</td><td>tests/test_audit_regressions.py
+wiki/教程/examples/compose.metrics-auth.yml
+wiki/教程/examples/prometheus.auth.yml</td></tr><tr><td>testing_quality</td><td>19</td><td>tests/mcp_fixture_server.py
+tests/test_agent_orchestrator.py
+tests/test_audit_regressions.py
+tests/test_chat_reliability.py
+tests/test_concurrency.py
+tests/test_eval_jobs.py
+tests/test_evaluator.py
+tests/test_intent_embedding.py
+tests/test_intent_recognizer.py
+tests/test_knowledge_base.py</td></tr></tbody></table>
+    </section>
+
+    <section class="grid two">
+      <div>
+        <h2>依赖和环境</h2>
+        <ul><li><code>Dockerfile</code></li><li><code>docker-compose.yml</code></li><li><code>requirements-dev.txt</code></li><li><code>requirements.txt</code></li></ul>
+      </div>
+      <div>
+        <h2>README</h2>
+        <ul><li><code>README.md</code></li><li><code>skills/README.md</code></li><li><code>wiki/教程/README.md</code></li></ul>
+      </div>
+    </section>
+
+    <section class="grid three">
+      <div>
+        <h2>Notebooks</h2>
+        <p class="empty">无</p>
+      </div>
+      <div>
+        <h2>Docker</h2>
+        <ul><li><code>.dockerignore</code></li><li><code>Dockerfile</code></li><li><code>docker-compose.web.yml</code></li><li><code>docker-compose.yml</code></li><li><code>docker-deploy.sh</code></li></ul>
+      </div>
+      <div>
+        <h2>Tests</h2>
+        <ul><li><code>tests/mcp_fixture_server.py</code></li><li><code>tests/test_agent_orchestrator.py</code></li><li><code>tests/test_audit_regressions.py</code></li><li><code>tests/test_chat_reliability.py</code></li><li><code>tests/test_concurrency.py</code></li><li><code>tests/test_eval_jobs.py</code></li><li><code>tests/test_evaluator.py</code></li><li><code>tests/test_intent_embedding.py</code></li><li><code>tests/test_intent_recognizer.py</code></li><li><code>tests/test_knowledge_base.py</code></li><li><code>tests/test_llm_utils.py</code></li><li><code>tests/test_optimization_regressions.py</code></li><li><code>tests/test_performance.py</code></li><li><code>tests/test_standard_mcp.py</code></li><li><code>tests/test_tool_manager.py</code></li><li><code>tests/verify_chat_atomic.py</code></li><li><code>tests/verify_memory_concurrency.py</code></li><li><code>tests/verify_memory_keys.py</code></li><li><code>tests/verify_request_concurrency.py</code></li></ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>潜在数据 / 状态 / 模型 / 资源路径</h2>
+      <ul><li><code>data/chroma/1f7ec483-dfba-4ddc-8919-72c86652ac76/data_level0.bin</code></li><li><code>data/chroma/1f7ec483-dfba-4ddc-8919-72c86652ac76/header.bin</code></li><li><code>data/chroma/1f7ec483-dfba-4ddc-8919-72c86652ac76/length.bin</code></li><li><code>data/chroma/1f7ec483-dfba-4ddc-8919-72c86652ac76/link_lists.bin</code></li><li><code>data/chroma/563fc5ab-16c6-43e6-ae77-08bf025fb028/data_level0.bin</code></li><li><code>data/chroma/563fc5ab-16c6-43e6-ae77-08bf025fb028/header.bin</code></li><li><code>data/chroma/563fc5ab-16c6-43e6-ae77-08bf025fb028/length.bin</code></li><li><code>data/chroma/563fc5ab-16c6-43e6-ae77-08bf025fb028/link_lists.bin</code></li><li><code>data/chroma/chroma.sqlite3</code></li><li><code>data/demo_docs/sample_knowledge.json</code></li><li><code>data/demo_docs/troubleshooting.md</code></li><li><code>data/eval/availability-2026-10-24.json</code></li><li><code>data/eval/availability-2026-10-24.junit.xml</code></li><li><code>data/eval/baseline.json</code></li><li><code>data/eval/deepseek-intent-diagnostic-2026-10-25.json</code></li><li><code>data/eval/embedding-2026-10-24.junit.xml</code></li><li><code>data/eval/embedding-chain-fixed-2026-10-25.json</code></li><li><code>data/eval/embedding-chain-live-2026-10-25.json</code></li><li><code>data/eval/embedding-live-2026-10-24.json</code></li><li><code>data/eval/history/036d5ce02abd460fa38fb638e0073085.json</code></li><li><code>data/eval/speed-cost-after-2026-10-25.json</code></li><li><code>data/eval/speed-cost-before-2026-10-25.json</code></li><li><code>data/eval/speed-cost-chat-2026-10-25.json</code></li><li><code>data/eval/speed-cost-chat-initial-2026-10-25.json</code></li><li><code>data/eval/speed-cost-summary-2026-10-25.json</code></li><li><code>wiki/assets/architecture/01-overall-architecture.svg</code></li><li><code>wiki/assets/architecture/02-chat-flow.svg</code></li><li><code>wiki/assets/architecture/03-agent-skills.svg</code></li><li><code>wiki/assets/architecture/04-data-storage.svg</code></li><li><code>wiki/assets/architecture/05-monitor-eval.svg</code></li></ul>
+    </section>
+
+    <section>
+      <h2>目录树摘要</h2>
+      <pre>EchoMind/
+  agents/
+  api/
+  config/
+  core/
+  data/
+  evaluation/
+  logs/
+  memory/
+  monitor/
+  scripts/
+  skills/
+  tests/
+  tooling/
+  wiki/
+  .dockerignore
+  .env
+  .env.example
+  .gitignore
+  2026.08.29改动说明.md
+  2026.09.28更新说明.md
+  2026.10.02更新说明.md
+  2026.10.13更新说明.md
+  2026.10.14更新说明.md
+  Dockerfile
+  README.md
+  build-image.sh
+  docker-compose.web.yml
+  docker-compose.yml
+  docker-deploy.sh
+  requirements-dev.txt
+  requirements.txt
+  run-image.sh
+    agent_orchestrator.py
+    tools.py
+    main.py
+    alerts/
+    grafana/
+    nginx/
+    mcp_servers.json
+    prometheus.yml
+      dashboards/
+      provisioning/
+      ssl/
+      frontend.conf
+      nginx.conf
+      web-gateway.conf
+    access.py
+    concurrency.py
+    conversation_state.py
+    intent_embedding.py
+    intent_recognizer.py
+    llm_utils.py
+    performance.py
+    redaction.py
+    skill_loader.py
+    chroma/
+    demo_docs/
+    eval/
+      1f7ec483-dfba-4ddc-8919-72c86652ac76/
+      563fc5ab-16c6-43e6-ae77-08bf025fb028/
+      chroma.sqlite3
+      sample_knowledge.json
+      troubleshooting.md
+      history/
+      availability-2026-10-24.json
+      availability-2026-10-24.junit.xml
+      baseline.json
+      deepseek-intent-diagnostic-2026-10-25.json
+      embedding-2026-10-24.junit.xml
+      embedding-chain-fixed-2026-10-25.json
+      embedding-chain-live-2026-10-25.json
+      embedding-live-2026-10-24.json
+      speed-cost-after-2026-10-25.json
+      speed-cost-before-2026-10-25.json
+      speed-cost-chat-2026-10-25.json
+      speed-cost-chat-initial-2026-10-25.json
+      speed-cost-summary-2026-10-25.json
+    evaluator.py
+    few_shot.py
+    jobs.py
+    conversation_memory.py
+    performance_monitor.py
+    check_embedding.py
+    billing_support/
+    general_customer_service/
+    technical_support/
+    README.md
+      SKILL.md
+      SKILL.md
+      SKILL.md
+    mcp_fixture_server.py
+    test_agent_orchestrator.py
+    test_audit_regressions.py
+    test_chat_reliability.py
+    test_concurrency.py
+    test_eval_jobs.py
+    test_evaluator.py
+    test_intent_embedding.py
+    test_intent_recognizer.py
+    test_knowledge_base.py
+    test_llm_utils.py
+    test_optimization_regressions.py
+    test_performance.py
+    test_standard_mcp.py
+    test_tool_manager.py
+    verify_chat_atomic.py
+    verify_memory_concurrency.py
+    verify_memory_keys.py
+    verify_request_concurrency.py
+    __init__.py
+    knowledge_base.py
+    mcp_client.py
+    mcp_server.py
+    tool_manager.py
+    assets/
+    教程/
+    Echo Agent一周如何速成.md
+    EchoMind 场景扩展指南.md
+    EchoMind学习文档.md
+    EchoMind定位与技术亮点.md
+    NexusOps企业智能运营协同中枢.md
+    业务流程说明.md
+    完整使用指南.md
+    带数据指标的加强版简历模板.md
+    技术亮点.md
+    文档中心.md
+    架构图.md
+    简历包装.md
+    重点代码.md
+      architecture/
+      flows/
+      posters/
+      examples/
+      scripts/
+      01-项目全貌与基础概念.md
+      02-环境搭建与页面体验.md
+      03-架构代码与数据存储.md
+      04-请求入口鉴权与重试回执.md
+      05-上下文读取与多轮状态.md
+      06-意图识别与三路融合.md
+      07-Agent路由Skills与工具执行.md
+      08-知识库RAG与MCP扩展.md
+      09-记忆提交压缩与画像更新.md
+      10-监控降权与恢复.md
+      11-评测Few-shot与回归基线.md
+      12-测试与故障排查.md
+      README.md
+      完善说明.md
+      附录-接口配置与数据字典.md</pre>
+    </section>
+
+    <section>
+      <h2>下一步人工确认</h2>
+      <ul>
+        <li>找到最小可运行命令：API、页面、CLI、worker、测试、训练或 demo 至少一个。</li>
+        <li>确认依赖、环境变量、数据库/数据文件、端口和外部服务。</li>
+        <li>确认 baseline/demo 是否能在本地、Docker、云服务器或 GPU 环境上跑通。</li>
+        <li>确认自己的面试亮点：改造点、demo、测试、报告或实验计划。</li>
+      </ul>
+    </section>
+    
+  </main>
+</body>
+</html>

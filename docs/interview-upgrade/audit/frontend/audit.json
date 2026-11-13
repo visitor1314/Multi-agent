@@ -1,0 +1,168 @@
+{
+  "name": "EchoMind-Frontend",
+  "repo_path": "E:\\project\\agent\\EchoMind所有代码+详细文档+简历\\EchoMindFrontend",
+  "generated_at": "2026-11-13T00:55:13.343904+00:00",
+  "summary": {
+    "file_count_scanned": 23,
+    "approx_total_bytes": 145048,
+    "top_extensions": [
+      [
+        ".js",
+        8
+      ],
+      [
+        "[no extension]",
+        3
+      ],
+      [
+        ".vue",
+        3
+      ],
+      [
+        ".json",
+        2
+      ],
+      [
+        ".conf",
+        2
+      ],
+      [
+        ".md",
+        1
+      ],
+      [
+        ".yml",
+        1
+      ],
+      [
+        ".html",
+        1
+      ],
+      [
+        ".sh",
+        1
+      ],
+      [
+        ".css",
+        1
+      ]
+    ],
+    "language_counts": [
+      [
+        "Other",
+        13
+      ],
+      [
+        "JavaScript",
+        8
+      ],
+      [
+        "YAML",
+        1
+      ],
+      [
+        "Shell",
+        1
+      ]
+    ]
+  },
+  "readme_files": [
+    "README.md"
+  ],
+  "dependency_files": [
+    "Dockerfile",
+    "docker-compose.yml",
+    "package.json"
+  ],
+  "notebooks": [],
+  "docker_files": [
+    ".dockerignore",
+    "Dockerfile",
+    "docker-compose.yml",
+    "docker/entrypoint.sh",
+    "docker/nginx-gateway.conf",
+    "docker/nginx.conf"
+  ],
+  "test_files": [
+    "tests/evaluationJobs.test.js",
+    "tests/requestState.test.js"
+  ],
+  "signals": {
+    "api_backend": [
+      "src/main.js"
+    ],
+    "async_jobs": [
+      "src/lib/evaluationJobs.js",
+      "tests/evaluationJobs.test.js"
+    ],
+    "config": [
+      "public/runtime-config.js",
+      "vite.config.js"
+    ],
+    "devops_deploy": [
+      ".dockerignore",
+      "Dockerfile",
+      "docker-compose.yml",
+      "docker/entrypoint.sh",
+      "docker/nginx-gateway.conf",
+      "docker/nginx.conf"
+    ],
+    "evaluation": [
+      "src/lib/evaluationJobs.js",
+      "tests/evaluationJobs.test.js",
+      "tests/requestState.test.js"
+    ],
+    "frontend_mobile": [
+      "src/components/AppIcon.vue",
+      "src/components/RequestInspector.vue"
+    ],
+    "inference_demo": [
+      "src/App.vue",
+      "src/components/AppIcon.vue"
+    ],
+    "testing_quality": [
+      "src/components/RequestInspector.vue",
+      "tests/evaluationJobs.test.js",
+      "tests/requestState.test.js"
+    ]
+  },
+  "potential_data_or_model_paths": [
+    "public/runtime-config.js"
+  ],
+  "tree": [
+    "EchoMindFrontend/",
+    "  docker/",
+    "  public/",
+    "  src/",
+    "  tests/",
+    "  .dockerignore",
+    "  .gitignore",
+    "  Dockerfile",
+    "  README.md",
+    "  docker-compose.yml",
+    "  index.html",
+    "  package-lock.json",
+    "  package.json",
+    "  vite.config.js",
+    "    entrypoint.sh",
+    "    nginx-gateway.conf",
+    "    nginx.conf",
+    "    runtime-config.js",
+    "    assets/",
+    "    components/",
+    "    lib/",
+    "    App.vue",
+    "    main.js",
+    "    styles.css",
+    "      AppIcon.vue",
+    "      RequestInspector.vue",
+    "      backends.js",
+    "      evaluationJobs.js",
+    "      requestState.js",
+    "    evaluationJobs.test.js",
+    "    requestState.test.js"
+  ],
+  "readme_samples": {
+    "README.md": "# EchoMind Frontend\n\n独立 Vue 前端项目，可同时连接 EchoMind Python 版本和 EchoMind Java 版本。\n\n项目目录：\n\n```text\n./EchoMindFrontend\n```\n\n## 功能\n\n- 在页面中切换 Java / Python 后端。\n- 统一适配 `/chat` 响应字段：\n  - Python：`conv_id`、`agent_type`、`latency_ms`\n  - Java：`conversation_id`、`agent_type`、`latency_ms`\n- 支持聊天调试、健康检查、监控摘要、知识库检索、知识库文档导入、文件上传。\n- 支持 Docker + Nginx 部署。\n\n## 默认后端地址\n\n| 后端 | 默认地址 |\n|------|----------|\n| Python | `http://localhost:8000` |\n| Java | `http://localhost:8080` |\n\n开发模式下，Vite 会代理：\n\n| 前端路径 | 代理到 |\n|----------|--------|\n| `/api/python` | `http://localhost:8000` |\n| `/api/java` | `http://localhost:8080` |\n\nDocker 模式下，Nginx 会通过运行时注入的地址访问后端。默认仍指向宿主机上的 Python / Java 服务。\n\n## 本地运行\n\n安装依赖：\n\n```bash\nnpm install\n```\n\n启动：\n\n```bash\nnpm run dev\n```\n\n访问：\n\n```text\nhttp://localhost:5173\n```\n\n如果后端端口不是默认值，可以启动时覆盖：\n\n```bash\nVITE_PYTHON_API_URL=http://localhost:8000 \\\nVITE_JAVA_API_URL=http://localhost:8080 \\\nnpm run dev\n```\n\n## Docker 部署\n\n先分别配置 `../EchoMind/.env` 和 `../EchoMindJava/.env`，再启动完整服务：\n\n```bash\ndocker compose up -d --build\n```\n\n前提是 `EchoMindFrontend` 的父目录下有这三个目录：\n\n```text\n../EchoMind\n../EchoMindJava\n./\n```\n\n访问前端：\n\n```text\nhttp://localhost\n```\n\n如果只想暴露前端端口，可改 `FRONTEND_PORT`，默认仍可通过 `80` 统一入口访问。\n\n停止：\n\n```bash\ndocker compose down\n```\n\n## 后端启动参考\n\nPython 版默认：\n\n```text\nhttp://localhost:8000\n```\n\nJava 版默认：\n\n```text\nhttp://localhost:8080\n```\n\n两个后端不需要同时启动。前端页面里选择当前要调试的后端即可。\n\n\n后端 Compose 服务通过 `env_file` 自动读取各自项目的 `.env`，普通启动不再需要额外 `--env-file`。\n共享 Redis 的密码和前端端口仍由前端目录的 `.env`、shell 或显式 `--env-file` 提供；\nCompose 中的 Redis 连接配置会覆盖后端文件内的 Redis 设置，保证两个后端连接同一个服务。\nPython 文件中的 `EVAL_JUDGE_MODEL`、`EVAL_JUDGE_MAX_TOKENS` 等配置也会完整传入容器。\n手动选择的后端不会因健康检查失败而改变；切换后端后，旧请求不能覆盖新页面的状态或回复。\n"
+  }
+}

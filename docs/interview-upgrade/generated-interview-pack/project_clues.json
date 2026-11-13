@@ -1,0 +1,333 @@
+{
+  "notes_root": "E:\\project\\agent\\EchoMind所有代码+详细文档+简历\\EchoMind\\docs\\interview-upgrade\\audit",
+  "source_files": [
+    "backend/audit.json",
+    "backend/overview.md",
+    "frontend/audit.json",
+    "frontend/overview.md"
+  ],
+  "metric_hits": [
+    {
+      "source": "backend/audit.json",
+      "text": "cost-after-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-before-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-chat-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-chat-initial-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-summary-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-after-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-before-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-chat-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-chat-initial-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-summary-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-after-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-before-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-chat-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-chat-initial-2026"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "cost-summary-2026"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "cost-after-2026"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "cost-before-2026"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "cost-chat-2026"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "cost-chat-initial-2026"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "cost-summary-2026"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "cost-after-2026"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "cost-before-2026"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "cost-chat-2026"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "cost-chat-initial-2026"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "cost-summary-2026"
+    }
+  ],
+  "claim_lines": [
+    {
+      "source": "backend/audit.json",
+      "text": "\"docker-deploy.sh\""
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"api/main.py\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"docker-deploy.sh\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"data/eval/baseline.json\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"wiki/assets/architecture/05-monitor-eval.svg\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"wiki/教程/examples/compose.metrics-auth.yml\""
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"api/main.py\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"wiki/assets/architecture/05-monitor-eval.svg\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"wiki/教程/examples/compose.metrics-auth.yml\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"wiki/教程/examples/prometheus.auth.yml\""
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"data/eval/baseline.json\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"wiki/assets/architecture/05-monitor-eval.svg\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"  api/\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"  monitor/\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"  docker-deploy.sh\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"      baseline.json\","
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"README.md\": \"# EchoMind\\n\\nEchoMind 是面向客服场景的多 Agent 应用，提供通用咨询、技术支持、账单处理和升级转人工等处理路径。它把意图识别、Agent 路由、知识库检索、外部工具、会话记忆和评测串在同一条对话链路中，适合学习 Agent 工程、验证业务流程和扩展自己的客服场景。\\n\\n本仓库是 **Python 后端**，使用 FastAPI 提供 HTTP API，并提供标准 MCP 服务端。配套 Web 前端和 Java 后端位于独立项目中；只运行本仓库即可通过 Swa"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"skills/README.md\": \"# EchoMind Skills 文档\\n\\nEchoMind 启动时会从 `ECHOMIND_SKILLS_DIR` 读取 Skills，并在匹配用户请求时注入到对应 Agent 的 system prompt。Skills 适合维护业务处理规范、客服话术、技术排障 SOP、账单审核边界、升级规则和禁止事项。\\n\\n当前内置三类 Skills：\\n\\n```text\\nskills/general_customer_service/SKILL.md  # 通用客服：接待"
+    },
+    {
+      "source": "backend/audit.json",
+      "text": "\"wiki/教程/README.md\": \"# EchoMind 源码教程\\n\\n这套教程以当前 Python 工作区为准，面向知道变量、函数和字典、但还没完整读过 Agent 应用的人。遇到类、异步、向量、工具协议等概念时，正文会结合实际代码解释，不要求你先掌握整套框架。核对日期：2026-10-14。\\n\\n编号教程和配套附录都在 `wiki/教程/`，终端命令仍在项目根目录执行。教程只关注当前 Python 应用，直接通过 API 和现有测试理解处理过程。\\n\\n先跑通一条消息，再理解各模块为什么存在、如何接"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "| api_backend | 7 | api/main.py<br>config/mcp_servers.json<br>skills/general_customer_service/SKILL.md<br>tests/mcp_fixture_server.py<br>tooling/mcp_server.py<br>wiki/assets/flows/memory-maintenance-current.mmd<br>wiki/assets/flows/memory-maintenance-current.p"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "| devops_deploy | 9 | .dockerignore<br>Dockerfile<br>config/nginx/frontend.conf<br>config/nginx/nginx.conf<br>config/nginx/web-gateway.conf<br>docker-compose.web.yml<br>docker-compose.yml<br>docker-deploy.sh |"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "| evaluation | 38 | data/eval/availability-2026-10-24.json<br>data/eval/availability-2026-10-24.junit.xml<br>data/eval/baseline.json<br>data/eval/deepseek-intent-diagnostic-2026-10-25.json<br>data/eval/embedding-2026-10-24.junit.xml<br>data/eval/embedding-chai"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "| inference_demo | 6 | api/main.py<br>config/mcp_servers.json<br>data/demo_docs/sample_knowledge.json<br>data/demo_docs/troubleshooting.md<br>tests/mcp_fixture_server.py<br>tooling/mcp_server.py |"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "| model | 6 | wiki/assets/architecture/01-overall-architecture.svg<br>wiki/assets/architecture/02-chat-flow.svg<br>wiki/assets/architecture/03-agent-skills.svg<br>wiki/assets/architecture/04-data-storage.svg<br>wiki/assets/architecture/05-monitor-eval.svg<br>w"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "| security_auth | 3 | tests/test_audit_regressions.py<br>wiki/教程/examples/compose.metrics-auth.yml<br>wiki/教程/examples/prometheus.auth.yml |"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "## Notebook / Docker / Test 线索"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "- `docker-deploy.sh`"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "- `data/eval/baseline.json`"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "- `wiki/assets/architecture/05-monitor-eval.svg`"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "api/"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "monitor/"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "docker-deploy.sh"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "baseline.json"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "- 找到最小可运行命令：API、页面、CLI、worker、测试、训练或 demo 至少一个。"
+    },
+    {
+      "source": "backend/overview.md",
+      "text": "- 确认 baseline/demo 是否能在本地、Docker、云服务器或 GPU 环境上跑通。"
+    },
+    {
+      "source": "frontend/audit.json",
+      "text": "\"tests/evaluationJobs.test.js\","
+    },
+    {
+      "source": "frontend/audit.json",
+      "text": "\"tests/requestState.test.js\""
+    },
+    {
+      "source": "frontend/audit.json",
+      "text": "\"tests/evaluationJobs.test.js\""
+    },
+    {
+      "source": "frontend/audit.json",
+      "text": "\"tests/evaluationJobs.test.js\","
+    },
+    {
+      "source": "frontend/audit.json",
+      "text": "\"tests/requestState.test.js\""
+    },
+    {
+      "source": "frontend/audit.json",
+      "text": "\"tests/evaluationJobs.test.js\","
+    },
+    {
+      "source": "frontend/audit.json",
+      "text": "\"tests/requestState.test.js\""
+    },
+    {
+      "source": "frontend/audit.json",
+      "text": "\"    evaluationJobs.test.js\","
+    },
+    {
+      "source": "frontend/audit.json",
+      "text": "\"    requestState.test.js\""
+    },
+    {
+      "source": "frontend/audit.json",
+      "text": "\"README.md\": \"# EchoMind Frontend\\n\\n独立 Vue 前端项目，可同时连接 EchoMind Python 版本和 EchoMind Java 版本。\\n\\n项目目录：\\n\\n```text\\n./EchoMindFrontend\\n```\\n\\n## 功能\\n\\n- 在页面中切换 Java / Python 后端。\\n- 统一适配 `/chat` 响应字段：\\n  - Python：`conv_id`、`agent_type`、`latency_ms`\\n  - Java：`co"
+    },
+    {
+      "source": "frontend/overview.md",
+      "text": "| async_jobs | 2 | src/lib/evaluationJobs.js<br>tests/evaluationJobs.test.js |"
+    },
+    {
+      "source": "frontend/overview.md",
+      "text": "| evaluation | 3 | src/lib/evaluationJobs.js<br>tests/evaluationJobs.test.js<br>tests/requestState.test.js |"
+    },
+    {
+      "source": "frontend/overview.md",
+      "text": "| testing_quality | 3 | src/components/RequestInspector.vue<br>tests/evaluationJobs.test.js<br>tests/requestState.test.js |"
+    },
+    {
+      "source": "frontend/overview.md",
+      "text": "## Notebook / Docker / Test 线索"
+    },
+    {
+      "source": "frontend/overview.md",
+      "text": "- `tests/evaluationJobs.test.js`"
+    },
+    {
+      "source": "frontend/overview.md",
+      "text": "- `tests/requestState.test.js`"
+    },
+    {
+      "source": "frontend/overview.md",
+      "text": "evaluationJobs.test.js"
+    },
+    {
+      "source": "frontend/overview.md",
+      "text": "requestState.test.js"
+    },
+    {
+      "source": "frontend/overview.md",
+      "text": "- 找到最小可运行命令：API、页面、CLI、worker、测试、训练或 demo 至少一个。"
+    },
+    {
+      "source": "frontend/overview.md",
+      "text": "- 确认 baseline/demo 是否能在本地、Docker、云服务器或 GPU 环境上跑通。"
+    }
+  ]
+}
